@@ -46,35 +46,40 @@ install_wordpress() {
 # Function to uninstall Nginx on Debian-based systems
 uninstall_nginx_debian() {
     echo "Uninstalling Nginx..."
-    sudo apt-get remove -y nginx
+    #sudo apt-get remove -y nginx
+    /path/to/app_uninstall.sh
     echo "Nginx uninstalled successfully."
 }
 
 # Function to uninstall Nginx on RHEL-based systems
 uninstall_nginx_rhel() {
     echo "Uninstalling Nginx..."
-    sudo dnf remove -y nginx
+    #sudo dnf remove -y nginx
+    /path/to/app_uninstall.sh
     echo "Nginx uninstalled successfully."
 }
 
 # Function to uninstall PostgreSQL on Debian-based systems
 uninstall_postgresql_debian() {
     echo "Uninstalling PostgreSQL..."
-    sudo apt-get remove -y postgresql postgresql-contrib
+    #sudo apt-get remove -y postgresql postgresql-contrib
+    /path/to/app_uninstall.sh
     echo "PostgreSQL uninstalled successfully."
 }
 
 # Function to uninstall PostgreSQL on RHEL-based systems
 uninstall_postgresql_rhel() {
     echo "Uninstalling PostgreSQL..."
-    sudo dnf remove -y postgresql-server postgresql-contrib
+    #sudo dnf remove -y postgresql-server postgresql-contrib
+    /path/to/app_uninstall.sh
     echo "PostgreSQL uninstalled successfully."
 }
 
 # Function to uninstall Docker
 uninstall_docker() {
     echo "Uninstalling Docker..."
-    sudo apt-get remove -y docker.io
+    #sudo apt-get remove -y docker.io
+    /path/to/app_uninstall.sh
     echo "Docker uninstalled successfully."
 }
 
@@ -82,6 +87,7 @@ uninstall_docker() {
 uninstall_wordpress() {
     echo "Uninstalling WordPress..."
     # Add WordPress uninstallation steps here
+    /path/to/app_uninstall.sh
     echo "WordPress uninstalled successfully."
 }
 
