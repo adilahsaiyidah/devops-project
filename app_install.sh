@@ -44,46 +44,52 @@ install_wordpress() {
 }
 
 # Function to uninstall Nginx on Debian-based systems
-uninstall_nginx_debian() {
-    echo "Uninstalling Nginx..."
-    sudo apt-get remove -y nginx
-    echo "Nginx uninstalled successfully."
-}
+#uninstall_nginx_debian() {
+#    echo "Uninstalling Nginx..."
+    #sudo apt-get remove -y nginx
+#    /path/to/app_uninstall.sh
+#    echo "Nginx uninstalled successfully."
+#}
 
 # Function to uninstall Nginx on RHEL-based systems
-uninstall_nginx_rhel() {
-    echo "Uninstalling Nginx..."
-    sudo dnf remove -y nginx
-    echo "Nginx uninstalled successfully."
-}
+#uninstall_nginx_rhel() {
+#    echo "Uninstalling Nginx..."
+    #sudo dnf remove -y nginx
+#    /path/to/app_uninstall.sh
+#    echo "Nginx uninstalled successfully."
+#}
 
 # Function to uninstall PostgreSQL on Debian-based systems
-uninstall_postgresql_debian() {
-    echo "Uninstalling PostgreSQL..."
-    sudo apt-get remove -y postgresql postgresql-contrib
-    echo "PostgreSQL uninstalled successfully."
-}
+#uninstall_postgresql_debian() {
+#    echo "Uninstalling PostgreSQL..."
+    #sudo apt-get remove -y postgresql postgresql-contrib
+#    /path/to/app_uninstall.sh
+#    echo "PostgreSQL uninstalled successfully."
+#}
 
 # Function to uninstall PostgreSQL on RHEL-based systems
-uninstall_postgresql_rhel() {
-    echo "Uninstalling PostgreSQL..."
-    sudo dnf remove -y postgresql-server postgresql-contrib
-    echo "PostgreSQL uninstalled successfully."
-}
+#uninstall_postgresql_rhel() {
+#    echo "Uninstalling PostgreSQL..."
+    #sudo dnf remove -y postgresql-server postgresql-contrib
+#    /path/to/app_uninstall.sh
+#    echo "PostgreSQL uninstalled successfully."
+#}
 
 # Function to uninstall Docker
-uninstall_docker() {
-    echo "Uninstalling Docker..."
-    sudo apt-get remove -y docker.io
-    echo "Docker uninstalled successfully."
-}
+#uninstall_docker() {
+#    echo "Uninstalling Docker..."
+    #sudo apt-get remove -y docker.io
+#    /path/to/app_uninstall.sh
+#    echo "Docker uninstalled successfully."
+#}
 
 # Function to uninstall WordPress
-uninstall_wordpress() {
-    echo "Uninstalling WordPress..."
+#uninstall_wordpress() {
+#    echo "Uninstalling WordPress..."
     # Add WordPress uninstallation steps here
-    echo "WordPress uninstalled successfully."
-}
+#    /path/to/app_uninstall.sh
+#    echo "WordPress uninstalled successfully."
+#}
 
 # Check OS type
 if [[ -e /etc/redhat-release ]]; then
@@ -103,10 +109,10 @@ echo "1. Install Nginx"
 echo "2. Install PostgreSQL"
 echo "3. Install Docker"
 echo "4. Install WordPress"
-echo "5. Uninstall Nginx"
-echo "6. Uninstall PostgreSQL"
-echo "7. Uninstall Docker"
-echo "8. Uninstall WordPress"
+#echo "5. Uninstall Nginx"
+#echo "6. Uninstall PostgreSQL"
+#echo "7. Uninstall Docker"
+#echo "8. Uninstall WordPress"
 echo "Enter the number of your choice: "
 read -r choice
 
@@ -131,28 +137,27 @@ case $choice in
     4)
         install_wordpress
         ;;
-    5) 
-        if [[ "$OS" == "Debian" ]]; then
-            uninstall_nginx_debian
-        elif [[ "$OS" == "RHEL" ]]; then
-            uninstall_nginx_rhel
-        fi
-        ;;
-    6) 
-        if [[ "$OS" == "Debian" ]]; then
-            uninstall_postgresql_debian
-        elif [[ "$OS" == "RHEL" ]]; then
-            uninstall_postgresql_rhel
-        fi
-        ;;
-    7) 
-        uninstall_docker
-        ;;
-    8)
-        uninstall_wordpress
-        ;;
-    *) 
-        echo "Invalid choice. Exiting..." 
-        ;;
+#    5) 
+#        if [[ "$OS" == "Debian" ]]; then
+#            uninstall_nginx_debian
+#        elif [[ "$OS" == "RHEL" ]]; then
+#            uninstall_nginx_rhel
+#        fi
+#        ;;
+#    6) 
+#        if [[ "$OS" == "Debian" ]]; then
+#            uninstall_postgresql_debian
+#        elif [[ "$OS" == "RHEL" ]]; then
+#            uninstall_postgresql_rhel
+#        fi
+#        ;;
+#    7) 
+#        uninstall_docker
+#        ;;
+#    8)
+#        uninstall_wordpress
+#        ;;
+#    *) 
+#        echo "Invalid choice. Exiting..." 
+#        ;;
 esac
-
